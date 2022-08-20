@@ -1,8 +1,25 @@
-# """
-#
-# 문제 : 1,1에서 시작해서 여행자가 상하좌우로 이동. 최종 좌표는?
-#
-# """
+"""
+
+문제 : 1,1에서 시작해서 여행자가 상하좌우로 이동. 최종 좌표는?
+
+"""
+
+import sys
+
+n = int(input())
+movearr = sys.stdin.readline().rstrip().split(" ")
+
+go = {'U': (-1,0), 'D': (1, 0), 'R': (0, 1), 'L': (0, -1)}
+x, y = 1, 1
+for i in movearr:
+    ny = y + go[i][0]
+    nx = x + go[i][1]
+    if nx < 1 or nx > n or ny < 1 or ny > n:
+        continue
+    x, y = nx, ny
+
+print(go['R'])
+print(y, x)
 
 # import sys
 #
@@ -37,18 +54,51 @@
 #
 # -------------------------------------------
 
-import sys
+# import sys
+#
+# n = int(input())
+# movearr = sys.stdin.readline().rstrip().split(" ")
+#
+# # def solution(dirs):
+# d = {'U': (-1,0), 'D': (1, 0), 'R': (0, 1), 'L': (0, -1)}
+# x, y = 1, 1
+# for i in movearr:
+#     ny = y + d[i][0]
+#     nx = x + d[i][1]
+#     if nx < 1 or nx > n or ny < 1 or ny > n:
+#         continue
+#     x, y = nx, ny
+# print(y, x)
 
-n = int(input())
-movearr = sys.stdin.readline().rstrip().split(" ")
 
-# def solution(dirs):
-d = {'U': (-1,0), 'D': (1, 0), 'R': (0, 1), 'L': (0, -1)}
-x, y = 1, 1
-for i in movearr:
-    ny = y + d[i][0]
-    nx = x + d[i][1]
-    if nx < 1 or nx > n or ny < 1 or ny > n:
-        continue
-    x, y = nx, ny
-print(y, x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
