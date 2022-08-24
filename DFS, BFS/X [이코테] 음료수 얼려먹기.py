@@ -18,6 +18,7 @@ def ice_dfs(graph):
     count = 0
 
     def dfs(y, x) :
+        # 주어진 범위를 벗어나는 경우에는 즉시 종료
         if y<0 or y>=n or x<0 or x>=m or graph[y][x] != 0 :
             return
 
